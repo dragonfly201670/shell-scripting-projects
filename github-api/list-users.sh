@@ -1,5 +1,19 @@
 #!/bin/bash
 
+
+
+# helper function
+function check_helper {
+        expected_args=2
+        if [$# -ne $expected_args]; then
+                echo "pass correct number of args"
+                exit
+        fi
+}
+
+
+check_helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
